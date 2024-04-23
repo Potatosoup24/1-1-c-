@@ -1,0 +1,32 @@
+//2개의 정수를 a,b에 입력하여 a>=b일 때 C에 곱을 구하여 표시하고 a<b일 때 c에 b/a를 구하여 표시하는 프로그램을 작성하라
+
+
+#include <stdio.h>
+#define _NO_SECURE_WARNINGS
+int main(void)
+{
+	int a;
+	int b;
+	int c1;
+	int c2;
+	printf("첫번째 양의 정수를 입력하시오 : ");
+	scanf_s("%d", &a);
+	printf("두번째 양의 정수를 입력하시오 : ");
+	scanf_s("%d", &b);
+	if (a > 0 && b > 0) {
+		if (a >= b) {
+			c1 = a * b;
+			printf("%d", c1);
+		}
+		else if (a<b) {
+			c1 = a / b;
+			printf("몫은 %d\n", c1);
+			c2 = a % b;
+			printf("나머지는 %d", c2);
+		}
+	}
+	else {
+		printf("양의 정수만 입력하시오.");
+	}
+	return 0;
+}
